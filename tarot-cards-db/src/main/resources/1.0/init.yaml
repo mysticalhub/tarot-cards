@@ -1,0 +1,8 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: init
+      author: mith
+      changes:
+        - sql:
+            sql: "CREATE TABLE ONE"

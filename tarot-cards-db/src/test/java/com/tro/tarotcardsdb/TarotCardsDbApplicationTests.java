@@ -1,10 +1,10 @@
-package com.tro.tarotcards;
+package com.tro.tarotcardsdb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TarotCardsApplicationTests {
+class TarotCardsDbApplicationTests {
 
     @Test
     void contextLoads() {
