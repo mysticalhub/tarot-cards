@@ -9,5 +9,4 @@ public class TarotCardsImplApplication {
     public static void main(String[] args) {
         SpringApplication.run(TarotCardsImplApplication.class, args);
     }
-
 }
