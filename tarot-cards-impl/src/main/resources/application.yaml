@@ -1,0 +1,40 @@
+server:
+  port: 8050
+  servlet:
+    context-path: /taro
+    encoding:
+      charset: UTF-8
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+  api-docs:
+    path: /v1/api/docs
+
+spring:
+  application:
+    name: taro
+  datasource:
+    url: ${DATASOURCE_URL_TARO:jdbc:postgres:8080}
+    username: ${DATASOURCE_USERNAME_TARO:us}
+    password: ${DATASOURCE_PASSWORD_TARO:us}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: ${MAX_POOL_SIZE:10}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    change-log: classpath:master.yaml
+    enabled: false
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: ${FEIGN_CONNECT_TIMEOUT:60000}
+        readTimeout: ${FEIGN_READ_TIMEOUT:10000}
