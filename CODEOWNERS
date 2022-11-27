@@ -1,0 +1,10 @@
+@@@Owner        @"JavaBiteCode"
+
+*               @@Owner
+Check(@@Owner >=1)
+
+*.sql           @@Owner
+Check(@@Owner >=1)
+
+CODEOWNERS      @@Owner
+Check(@@Owner >=1)
